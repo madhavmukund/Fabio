@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fashio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendor/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="main-title">
+                <h1><span id="title">Fashio</span><br>Keeping Every Fashion in Mind.</h1>
+                <a href="#regist"  class="btn" id="btn1">Register</a>
+            </div>
+            <div class="sec-title">
+                <h4>Fashion . News . Design</h4>
+            </div>
+        </header>
+        <section class="registration" id="regist">
+            <div class="row">
+                <h2>Registration</h2>
+            </div>
+            <div class="row">
+                <h3>Register With us for Free and Join our Premium Community.</h3>
+            </div>
+            <div class="row">
+                <ul>
+                    <li><a href="#regist" class="btn-2" id="login" onclick="login1()">Login</a></li>
+                    <li><a href="#regist" class="btn-2" id="signup" onclick="sign_up()">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="row form">
+                <div class="col box">
+                    <h4 id="user_up">Enter UserId:</h4>
+                    <input id="user">
+                    <h4 id="password_up">Enter Password:</h4>
+                    <input id="password">
+                    <br>
+                    <div>
+                        <a href="#" class="btn" id="registration_btn">Click</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li><ion-icon name="logo-google"></ion-icon></li>
+                <li><ion-icon name="logo-facebook"></ion-icon></li>
+                <li><ion-icon name="logo-instagram"></ion-icon></li>
+                <li><ion-icon name="logo-twitter"></ion-icon></li>
+                <li><ion-icon name="logo-pinterest"></ion-icon></li>
+            </ul>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            function login1()
+            {
+                document.getElementById('login').style.backgroundColor=" rgb(207, 51, 207)";
+                document.getElementById('signup').style.backgroundColor="white";
+                document.getElementById('user_up').innerHTML="Enter UserId:";
+                document.getElementById('password_up').innerHTML="Enter Password:";
+                document.getElementById('registration_btn').onclick= function() {submit()};
+            }
+
+            function sign_up()
+            {
+                document.getElementById('signup').style.backgroundColor= "rgb(207, 51, 207)";
+                document.getElementById('login').style.backgroundColor="white";
+                document.getElementById('user_up').innerHTML="Enter new UserId:"
+                document.getElementById('password_up').innerHTML="Enter new Password:"
+                document.getElementById('registration_btn').onclick=function(){sign()};
+            }
+
+            function submit()
+            {
+                if(document.getElementById('user').value=="" || document.getElementById('password').value=="")
+                {
+                    alert("Fill the missing fields.");
+                }
+                else
+                {
+                    var result=confirm("Please check your username: "+document.getElementById('user').value);
+                    if(result==true)
+                    {
+                        alert("Welcome");
+                    }
+                    else
+                    {
+                        alert("Thanks for loging");
+                    }
+                }
+            }
+
+            function sign()
+            {
+                if(document.getElementById('user').value=="" || document.getElementById('signup').value=="")
+                {
+                    alert("Fill the missing fields.")
+                }
+                else
+                {
+                    login1();
+                }
+            }
+        </script>
+    </body>
+</html>
