@@ -1,7 +1,7 @@
-# Fashio
-## An everything fashion website.
+<i><b> Fashio </b>
+#### An everything fashion website. </i>
 <br>
---------------------------------------------------------
+
 Team Details-
 <br>1.Shubhankita Sood -RA1911033010035
 <br>2.Madhav Mukund Verma- RA1911033010014
