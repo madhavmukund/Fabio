@@ -1,4 +1,4 @@
-# <i><b>  Fashi </b>
+# <i><b>  Fashio </b>
 #### An everything fashion website. </i>
 <br>
 
