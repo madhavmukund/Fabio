@@ -1,0 +1,267 @@
+*
+{
+    box-sizing:border-box;
+}
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    color: #40514E;
+}
+
+h1 {
+    color: #745582;
+    margin: 0px auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem;
+}
+
+h2 {
+    color: #9885b2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #c197b4    ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    line-height: 2;
+}
+
+hr {
+    border: dotted #dacfdd  6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+.top-container {
+
+    background-color: #fff0f5;
+    position: relative;
+    padding-top: 100px;
+}
+
+.middle-container {
+    margin: 50px 0 100px 0;
+}
+
+.bottom-container {
+    background-color: #B97A95;
+    padding: 50px 0 20px;
+
+}
+
+a {
+    color: #F2E1C1;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+    background: transparent;
+}
+
+a:hover {
+    color: #EAF6F6;
+
+}
+
+.copyright {
+    color: #eaf6f6;
+    font-size: 0.75rem;
+    padding: 20 0;
+}
+
+.intro {
+    width: 30%;
+    margin: auto;
+}
+
+.perfume {
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 200px;
+
+}
+
+
+.fashion {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 400px;
+
+}
+
+.tshirt {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 700px;
+
+}
+
+.dress {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    right: 400px;
+}
+
+.jewel {
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    right: 200px;
+
+
+
+}
+
+
+.hanger {
+    width: 25%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.blog
+{
+    width: 50%;
+    height:auto;
+    float: left;
+    margin-right:30px;
+    
+}
+
+.profile
+{
+    width: 75%;
+    margin: 80px auto 80px auto;
+    text-align: left;
+    line-height: 2;
+    overflow: auto
+}
+.skill-row {
+    width: 75%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+    overflow: auto
+}
+
+.homepage {
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+
+.login {
+    margin-left: 30px;
+    float: right;
+    width: 25%;
+}
+
+.fashionBlog
+{
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+.online-shopping {
+    margin-left: 30px;
+    float: right;
+    width: 25%;
+}
+
+ ul {
+    list-style: none;
+    line-height: normal;
+  }
+  
+  ul li::before {
+    content: "\2022";
+    color: #c77a8c;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    font-size: 2rem
+  
+  }
+
+
+.wrapper
+{
+    margin-top: 10%;
+}
+
+.our_team
+{
+    margin-bottom:80px;
+}
+
+.team-name
+{
+    color:#56323f ;
+    margin-top:50px;
+}
+.team
+{
+    display:flex;
+    text-align: center;
+    width: auto;
+    margin:0 150px; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team .team_member
+{
+    background: #F6F6F6   ;
+    margin:15px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width:300px;
+    padding:20px;
+    line-height: 20px;
+    color: #b13b27 ;
+    position: relative;
+}
+.team .team_member p.role{
+    color:#6f751a;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: bold;
+    margin:12px 0;
+}
+
+.team .team_member .team_img
+{
+    width:100px;
+    height:100%;
+    border-radius: 50%;
+    position:absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+}
+
+.team .team_member .team_img img
+{
+    width:100px;
+    height:100px;
+    padding:10px;
+}
