@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    </head>
+    <body>
+        <section class="login">
+            <div class="main-title" id="main-title">
+                <h1 id="imp-title">Fashio</h1>
+                <h2 id="tag-line">Reinventing Fashion.</h2>
+                <div class="benefits" id="benefits">
+                    <p>We at Fashio offer the following services:</p>
+                    <br>
+                    <ul>
+                        <li>Fashion</li>
+                        <li>Blogs</li>
+                        <li>Design</li>
+                        <li>Store</li>
+                    </ul>
+                    <br>
+                    <p>What are you waiting for? Join our community now!!</p>
+                </div>
+            </div>
+            <div class="box" id="box">
+                <div class="row login-title">
+                    <h2 id="login-title">Login</h2>
+                </div>
+                <div class="row content">
+                    <ul class="main-content" id="main-content">
+                        <li>
+                            <h3 id="login-id">Login ID</h3>
+                            <input type="text" placeholder=" Login ID" autofocus id="lid">
+                        </li>
+                        <li>
+                            <h3 id="psswd">Password</h3>
+                            <input type="password" placeholder=" Password" id="passwd">
+                        </li>
+                        <li id="confirm">
+                            <h3 id="cpsswd">Re-Enter Password</h3>
+                            <input type="password" placeholder=" Confirm Password" id="cpasswd">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row main-btn">
+                    <button class="btn" id="btn" onclick="login_page()">Login</button>
+                </div>
+                <div class="row switch">
+                    <h5 id="switch" onclick="sign_up()">New User? Click here to Register.</h5>
+                </div>
+            </div>
+        </section>
+        <script>
+            function sign_up()
+            {
+                document.getElementById("lid").value="";
+                document.getElementById("passwd").value="";
+                document.getElementById("cpasswd").value="";
+                document.getElementById("login-title").innerHTML="Sign Up";
+                document.getElementById("login-id").innerHTML="Login ID";
+                document.getElementById("psswd").innerHTML="Password";
+                document.getElementById("btn").innerHTML="Register";
+                document.getElementById("switch").innerHTML="Existing user? Click here to Login.";
+                document.getElementById("switch").onclick=login;
+                var title = document.getElementById("main-title");
+                title.style.top="15%";
+                var heading = document.getElementById("imp-title");
+                heading.style.fontSize="80px";
+                var tag = document.getElementById("tag-line");
+                tag.style.display="none";
+                var benefits = document.getElementById("benefits");
+                benefits.style.display="block";
+                var confirm = document.getElementById("confirm");
+                confirm.style.display="block";
+                var box = document.getElementById("box");
+                box.style.top="9%";
+                document.getElementById("btn").onclick=function(){sign_new()};
+            }
+
+            function login()
+            {
+                document.getElementById("login-title").innerHTML="Login";
+                document.getElementById("login-id").innerHTML="Login ID";
+                document.getElementById("psswd").innerHTML="Password";
+                document.getElementById("btn").innerHTML="Login";
+                document.getElementById("switch").innerHTML="New User? Click here to Register.";
+                document.getElementById("switch").onclick=sign_up;
+                var title = document.getElementById("main-title");
+                title.style.top="30%";
+                var tag=document.getElementById("tag-line");
+                tag.style.display="block";
+                var heading = document.getElementById("imp-title");
+                heading.style.fontSize="110px";
+                var benefits = document.getElementById("benefits");
+                benefits.style.display="none";
+                var confirm = document.getElementById("confirm");
+                confirm.style.display="none";
+                var box = document.getElementById("box");
+                box.style.top="12%";
+                document.getElementById("btn").onclick=login_page;
+            }
+
+            function sign_new(){
+                if(document.getElementById("lid").value=="" || document.getElementById("passwd").value=="" || document.getElementById("cpasswd").value=="")
+                {
+                    alert("Some fields are missing!!");
+                }
+                else
+                {
+                    if(document.getElementById("passwd").value !== document.getElementById("cpasswd").value)
+                    {
+                        alert("Your passwords do not match!!");
+                    }
+                    else{
+                    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    if(document.getElementById('lid').value.match(mailformat))
+                    {
+                        login();
+                    }
+                    else{
+                        alert("Your Email Id is not valid. Please check it again!!")
+                    }
+                    }
+                }
+            }
+
+            function login_page()
+            {
+                if(document.getElementById("lid").value=="" || document.getElementById("passwd").value=="")
+                {
+                    alert("Some Fields are missing!!");
+                }
+                else
+                {
+                    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    if(document.getElementById('lid').value.match(mailformat))
+                    {
+                        window.location.replace("http://localhost:3000/");
+                    }
+                    else{
+                        alert("Your Email Id is not valid. Please check it again!!")
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
